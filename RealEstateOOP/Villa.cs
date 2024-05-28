@@ -14,16 +14,9 @@ namespace RealEstateOOP
         {
             GiardinoDim = giardinoDim;
         }
-        public string PrintVilla()         
+        public override string ToString()
         {
-                return $"Villa ID: {UniqueKey}" +
-                    $"\nIndirizzo: {Address}" +
-                    $"\nCap: {Cap}" +
-                    $"\nCitta': {Citta}" +
-                    $"\nSuperficie: {Area}" +
-                    $"\nNumero Vani: {NumeroVani}" +
-                    $"\nNumero Bagni: {NumeroBagni}"+
-                    $"\nSuperficie Giardino: {GiardinoDim}";           
+            return base.ToString() + $"\nSuperficie Giardino: {GiardinoDim}";
         }
     }
 }

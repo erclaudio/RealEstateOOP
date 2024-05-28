@@ -19,8 +19,30 @@ namespace RealEstateOOP
                 Area = 45,
                 PostiAuto = 2
             };
+            Villa villa1 = new Villa
+            {
+                UniqueKey = 2,
+                Address = "Piazza Dei Ceppi Verdi 69",
+                Cap = "00674",
+                Citta = "Pisa",
+                Area = 435,
+                GiardinoDim = 893
+
+            };
+            Appartamento app1 = new Appartamento
+            {
+                UniqueKey = 3,
+                Address = "Giardino Grigio 23",
+                Cap = "00111",
+                Citta = "Roma",
+                Area = 123,
+                NumeroVani = 4,
+                NumeroBagni = 3
+            };
             Agenzia CompraEasyAge = new Agenzia("CompraEasy");
             CompraEasyAge.AddImmobile(box1);
+            CompraEasyAge.AddImmobile(villa1);
+            CompraEasyAge.AddImmobile(app1);
             Console.WriteLine($"Benvenuto in {CompraEasyAge.nome}, inserisci la chiave di ricerca: ");
             int selection = int.Parse( Console.ReadLine() );
             Immobile immobile = CompraEasyAge.SearchImmobili(selection);

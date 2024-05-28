@@ -17,13 +17,9 @@ namespace RealEstateOOP
             NumeroBagni = Bagni;
         }
 
-        public string PrintAppartamento()
+        public override string ToString()
         {
-            return $"Appartamento ID: {UniqueKey}" +
-                $"\nIndirizzo: {Address}" +
-                $"\nCap: {Cap}" +
-                $"\nCitta': {Citta}" +
-                $"\nSuperficie: {Area}" +
+            return base.ToString() +
                 $"\nNumero Vani: {NumeroVani}" +
                 $"\nNumero Bagni: {NumeroBagni}";
         }
